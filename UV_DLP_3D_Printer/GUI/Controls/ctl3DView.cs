@@ -668,6 +668,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
                 {
                     m_movingobjectmode = true;
                     Object3d obj = UVDLPApp.Instance().SelectedObject;
+                    
                     if (obj != null)
                     {
                         m_savex = obj.m_center.x;
@@ -679,6 +680,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
                             obj.FindMinMax();
                             m_saveh = obj.m_max.z - obj.m_min.z;
                         }
+                        
                     }
                 }
             }
@@ -777,6 +779,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
         private void glControl1_MouseMove(object sender, MouseEventArgs e)
         {
 
+
             double dx = 0, dy = 0;
 
             if (lmdown || rmdown || mmdown || Keyboard.GetState().IsKeyDown(Key.ShiftLeft))
@@ -817,7 +820,10 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             }
             if (Keyboard.GetState().IsKeyDown(Key.ShiftLeft) || Keyboard.GetState().IsKeyDown(Key.ShiftRight)) // if we're moving an object - shift key down
             {
-                
+
+                //UVDLPApp.Instance().m_appconfig.m_viewslice3d = true;
+                SetNumLayers(0);
+                UVDLPApp.Instance().RaiseAppEvent(eAppEvent.eReDraw, "");
 
                 var t1 = DateTime.Now;
                 List<ISectData> hits = TestHitTest(e.X, e.Y, true);
