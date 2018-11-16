@@ -27,7 +27,7 @@ namespace UV_DLP_3D_Printer.GUI.CustomGUI
             //cmdCopy.ForeColor = ct.ForeColor;
             //cmdDelete.ForeColor = ct.ForeColor;
             treeScene.BackColor = Color.FromArgb(255, 238, 238, 238);
-            treeScene.ForeColor = ctlTitle1.ForeColor = Color.FromArgb(255, 58, 85, 85);// ct.ForeColor;
+            treeScene.ForeColor = ctlTitle1.ForeColor = Color.Black;// Color.FromArgb(255, 58, 85, 85);// ct.ForeColor;
 
             panel1.BackColor = Color.FromArgb(255, 224, 224, 224);
             manipObject.BackColor = Color.FromArgb(255, 238, 238, 238);
@@ -78,7 +78,7 @@ namespace UV_DLP_3D_Printer.GUI.CustomGUI
             if (ct.ForeColor.IsValid())
             {
                 ctlTitle1.ForeColor = ct.ForeColor;
-                treeScene.ForeColor = ct.ForeColor;
+                //treeScene.ForeColor = ct.ForeColor;
                 treeScene.LineColor = ct.ForeColor;
                 cmdCopy.ForeColor = ct.ForeColor;
                 cmdDelete.ForeColor = ct.ForeColor;

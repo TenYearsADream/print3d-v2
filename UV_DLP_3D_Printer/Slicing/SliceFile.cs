@@ -128,7 +128,7 @@ namespace UV_DLP_3D_Printer.Slicing
         /*
          This function get the slice from the cache/drive 
          */
-        public Bitmap GetSliceImage(int layer, bool outline = true, bool bottomLayer = false) // 0 based index
+        public Bitmap GetSliceImage(int layer, bool outline = false, bool bottomLayer = false) // 0 based index
         {
             
             try

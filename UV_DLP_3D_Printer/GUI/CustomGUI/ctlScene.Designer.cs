@@ -101,7 +101,7 @@
             this.treeScene.BackColor = System.Drawing.Color.RoyalBlue;
             this.treeScene.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeScene.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeScene.ForeColor = System.Drawing.Color.White;
+            this.treeScene.ForeColor = System.Drawing.Color.Black;
             this.treeScene.Location = new System.Drawing.Point(3, 54);
             this.treeScene.Name = "treeScene";
             this.treeScene.Size = new System.Drawing.Size(243, 240);
