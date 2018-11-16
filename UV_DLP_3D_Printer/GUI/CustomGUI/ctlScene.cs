@@ -13,6 +13,15 @@ namespace UV_DLP_3D_Printer.GUI.CustomGUI
     public partial class ctlScene : ctlAnchorable
     {
         bool ignorerefresh;
+        //private EventHandler _copyObject;
+        
+        //public event EventHandler DoplicateObject
+        //{
+        //    //add { _newMenuItem.Click += value; }
+        //    add { _copyObject += value; }
+        //    // ReSharper disable once DelegateSubtraction
+        //    remove { _copyObject -= value; }
+        //}
         public ctlScene()
         {
             InitializeComponent();
@@ -248,7 +257,10 @@ namespace UV_DLP_3D_Printer.GUI.CustomGUI
         {
             cmdRemoveObject_Click(null, null);
         }
-
+        public void CopyObject()
+        {
+            cmdCopy_Click(null, null);
+        }
         private void cmdCopy_Click(object sender, EventArgs e)
         {
             //copy the object
@@ -297,7 +309,5 @@ namespace UV_DLP_3D_Printer.GUI.CustomGUI
         {
             UVDLPApp.Instance().m_gui_config.AddButton(parentName + ".title", ctlTitle1);
         }
-       
-
     }
 }

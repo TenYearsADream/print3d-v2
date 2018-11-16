@@ -1549,7 +1549,15 @@ namespace UV_DLP_3D_Printer.GUI
 
         private void ctlMainConfig1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void frmMain2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Control && e.KeyCode == Keys.D)
+            {
+                ctlScene1.CopyObject();
+            }
         }
     }
 }
