@@ -765,7 +765,7 @@ namespace UV_DLP_3D_Printer.GUI
 
             UVDLPApp.Instance().m_callbackhandler.RegisterCallback("ClickExpandLeft", ClickExpandLeft_Click, null, "Expand / retract left panel");
             //load model click
-            UVDLPApp.Instance().m_callbackhandler.RegisterCallback("LoadSTLModel_Click", LoadSTLModel_Click, null, ((DesignMode) ? "LoadModel" :UVDLPApp.Instance().resman.GetString("LoadModel", UVDLPApp.Instance().cul)));
+            UVDLPApp.Instance().m_callbackhandler.RegisterCallback("LoadSTLModel_Click", new CallbackType(LoadSTLModel_Click), null, ((DesignMode) ? "LoadModel" :UVDLPApp.Instance().resman.GetString("LoadModel", UVDLPApp.Instance().cul)));
 
             // Connecting / disconnecting printer
             UVDLPApp.Instance().m_callbackhandler.RegisterCallback("ConnectPrinter", cmdConnect1_Click, null, ((DesignMode) ? "ConnectToThePrinter" :UVDLPApp.Instance().resman.GetString("ConnectToThePrinter", UVDLPApp.Instance().cul)));
@@ -1145,9 +1145,24 @@ namespace UV_DLP_3D_Printer.GUI
         }
         public void LoadSTLModel_Click(object sender, object e)
         {
+            LoadSTLModel_Click(sender, e, null);
+        }
+        public void LoadSTLModel_Click(object sender, object e, bool? sc = false)
+        {
             openFileDialog1.FileName = "";
             //openFileDialog1.Filter = "3D Model Files (*.stl;*.obj;*.3ds;*.amf)|*.stl;*.obj;*.3ds;*.amf|Scene files (*.cws)|*.cws";
-            openFileDialog1.Filter = "3D Model Files (*.stl;*.obj;*.3ds;*.amf)|*.stl;*.obj;*.3ds;*.amf|Scene files (*." + SceneFileExt + ")|*." + SceneFileExt;
+            if (sc.HasValue)
+            {
+                if (sc.Value)
+                    openFileDialog1.Filter = "Scene files (*." + SceneFileExt + ")|*." + SceneFileExt;
+                else
+                    openFileDialog1.Filter = "3D Model Files (*.stl;*.obj;*.3ds;*.amf)|*.stl;*.obj;*.3ds;*.amf";
+            }
+
+            else
+            {
+                openFileDialog1.Filter = "3D Model Files (*.stl;*.obj;*.3ds;*.amf)|*.stl;*.obj;*.3ds;*.amf|Scene files (*." + SceneFileExt + ")|*." + SceneFileExt;
+            }
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 foreach (string filename in openFileDialog1.FileNames)
@@ -1480,6 +1495,61 @@ namespace UV_DLP_3D_Printer.GUI
         private void buttDisconnect_Click(object sender, EventArgs e)
         {
             UVDLPApp.Instance().IntegrationFunction.PLCFunction.PLC.DisconnectPLC();
+        }
+
+        private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadSTLModel_Click(sender, e);
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void openScenceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadSTLModel_Click(sender, e, true);
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveScene(sender, e);
+        }
+
+        private void preferencesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPrefs prefs = new frmPrefs();
+            prefs.ShowDialog();
+        }
+
+        private void buttOpenFile_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UVDLPApp.Instance().m_undoer.Undo();
+        }
+
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UVDLPApp.Instance().m_undoer.Redo();
+        }
+
+        private void frmMain2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ctlMainManual1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ctlMainConfig1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

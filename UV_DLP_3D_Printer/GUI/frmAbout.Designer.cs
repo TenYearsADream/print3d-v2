@@ -28,117 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.version = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmdDonate = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cmdDonate = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // version
-            // 
-            this.version.AutoSize = true;
-            this.version.Font = new System.Drawing.Font("MicrosoftSansSerif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.version.Location = new System.Drawing.Point(3, 139);
-            this.version.Name = "version";
-            this.version.Size = new System.Drawing.Size(53, 20);
-            this.version.TabIndex = 7;
-            this.version.Text = "label2";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MicrosoftSansSerif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Free For Non Commercial Use";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("MicrosoftSansSerif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 51);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Creation Workshop"; 
-            // 
-            // cmdDonate
-            // 
-            this.cmdDonate.Image = Properties.Resource_s.donate; //global::((DesignMode) ? "Arial" :UVDLPApp.Instance().resman.GetString("Arial", UVDLPApp.Instance().cul));
-            this.cmdDonate.Location = new System.Drawing.Point(7, 295);
-            this.cmdDonate.Name = "cmdDonate";
-            this.cmdDonate.Size = new System.Drawing.Size(101, 34);
-            this.cmdDonate.TabIndex = 9;
-            this.cmdDonate.UseVisualStyleBackColor = true;
-            this.cmdDonate.Click += new System.EventHandler(this.cmdDonate_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(566, 341);
+            this.pictureBox1.Size = new System.Drawing.Size(453, 187);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // cmdDonate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MicrosoftSansSerif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Steve Hernandez Aka PacManFan";
+            this.cmdDonate.Image = global::UV_DLP_3D_Printer.Properties.Resource_s.donate;
+            this.cmdDonate.Location = new System.Drawing.Point(5, 240);
+            this.cmdDonate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cmdDonate.Name = "cmdDonate";
+            this.cmdDonate.Size = new System.Drawing.Size(76, 28);
+            this.cmdDonate.TabIndex = 9;
+            this.cmdDonate.UseVisualStyleBackColor = true;
+            this.cmdDonate.Visible = false;
+            this.cmdDonate.Click += new System.EventHandler(this.cmdDonate_Click);
             // 
-            // label4
+            // pictureBox2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MicrosoftSansSerif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Shai Segar";
+            this.pictureBox2.Image = global::UV_DLP_3D_Printer.Properties.Resources.conc3de_logo_80x240;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(429, 134);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(334, 159);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(107, 13);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "www.concr3de.com";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frmAbout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 341);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(453, 187);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cmdDonate);
-            this.Controls.Add(this.version);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAbout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label version;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button cmdDonate;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

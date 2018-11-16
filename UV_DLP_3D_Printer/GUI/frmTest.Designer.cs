@@ -33,6 +33,8 @@
             // 
             // ctlManualControl1
             // 
+            this.ctlManualControl1.ComponentSupport = "";
+            this.ctlManualControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctlManualControl1.Gapx = 0;
             this.ctlManualControl1.Gapy = 0;
             this.ctlManualControl1.GLBackgroundImage = null;
@@ -40,7 +42,7 @@
             this.ctlManualControl1.GuiAnchor = null;
             this.ctlManualControl1.Location = new System.Drawing.Point(0, 0);
             this.ctlManualControl1.Name = "ctlManualControl1";
-            this.ctlManualControl1.Size = new System.Drawing.Size(213, 375);
+            this.ctlManualControl1.Size = new System.Drawing.Size(667, 466);
             this.ctlManualControl1.StyleName = null;
             this.ctlManualControl1.TabIndex = 0;
             this.ctlManualControl1.SizeChanged += new System.EventHandler(this.ctlManualControl1_SizeChanged);

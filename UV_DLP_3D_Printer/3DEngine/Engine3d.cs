@@ -26,8 +26,8 @@ namespace Engine3D
         public event ModelAdded ModelAddedEvent;
         public event ModelRemoved ModelRemovedEvent;
         public bool m_alpha;
-        protected Color m_frameColor = Color.FromArgb(255, 50, 50, 50);
-        protected Color m_baseColor = Color.FromArgb(255, 50, 50, 50);
+        protected Color m_frameColor = Color.FromArgb(255, 170, 170, 170);
+        protected Color m_baseColor = Color.FromArgb(255, 164, 202, 205);
         protected Color m_textColor = Color.Red;
         public Color m_objectColor = Color.Gray;
         public Color m_selectColor = Color.FromArgb(255, 104, 173, 178);
@@ -340,7 +340,7 @@ namespace Engine3D
             {
                 GL.Enable(EnableCap.Lighting);
                 GL.Enable(EnableCap.Light0);
-                GL.Disable(EnableCap.LineSmooth);
+                //GL.Disable(EnableCap.LineSmooth);
                 if (UVDLPApp.Instance().m_appconfig.m_viewslice3d && UVDLPApp.Instance().m_appconfig.m_hideaboveslice && m_clipHeight >= 0)
                 {
                     GL.Disable(EnableCap.CullFace);
@@ -372,7 +372,10 @@ namespace Engine3D
                         obj.RenderGL(alpha, false, UVDLPApp.Instance().m_appconfig.m_showOutline, objColor);
                     }
                 }
-                GL.Enable(EnableCap.CullFace);
+
+
+                GL.Disable(EnableCap.CullFace);
+
                 GL.Disable(EnableCap.ClipPlane0);
 
                 GL.Disable(EnableCap.Lighting);
@@ -383,7 +386,7 @@ namespace Engine3D
                 {
                     ply.RenderGL();
                 }
-                // render selection bounding box
+                // render selection bounding box 
                 if (UVDLPApp.Instance().m_appconfig.m_showBoundingBox && (UVDLPApp.Instance().SelectedObjectList != null))
                 {
                     GL.LineWidth(2);

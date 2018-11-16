@@ -60,6 +60,7 @@ namespace UV_DLP_3D_Printer.GUI.CustomGUI
             // 
             // ctlTitle1
             // 
+            this.ctlTitle1.BackColor = System.Drawing.Color.Turquoise;
             this.ctlTitle1.Checked = false;
             this.ctlTitle1.CheckImage = global::UV_DLP_3D_Printer.Properties.Resource_s.buttStateTrig;
             this.ctlTitle1.Gapx = 0;
@@ -186,6 +187,7 @@ namespace UV_DLP_3D_Printer.GUI.CustomGUI
             this.buttShowConsole.Text = null;
             this.ctlToolTip1.SetToolTip(this.buttShowConsole, "Show Console");
             this.buttShowConsole.VerticalAnchor = UV_DLP_3D_Printer.GUI.CustomGUI.ctlAnchorable.AnchorTypes.None;
+            this.buttShowConsole.Load += new System.EventHandler(this.buttShowConsole_Load);
             this.buttShowConsole.Click += new System.EventHandler(this.buttShowConsole_Click);
             // 
             // flowLayoutPanel3

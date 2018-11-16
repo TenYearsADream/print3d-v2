@@ -21,7 +21,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
         public ctlManualControl()
         {
             InitializeComponent();
-            ApplyStyle(Style);
+            //ApplyStyle(Style);
             mComponentSupport = "XYZPG";
 
             cMCTilt.ReturnValues = new float[] { 1, 10, 100 };
@@ -216,36 +216,36 @@ namespace UV_DLP_3D_Printer.GUI.Controls
 
         void PackFlowPanel(FlowLayoutPanel flp)
         {
-            int w = 0;
-            int h = 0;
-            foreach (Control ctl in flp.Controls)
-            {
-                int cw = ctl.Width + ctl.Margin.Left + ctl.Margin.Right;
-                int ch = ctl.Height + ctl.Margin.Top + ctl.Margin.Bottom;
-                if (ctl.Visible)
-                {
-                    if ((flp.FlowDirection == FlowDirection.LeftToRight) || (flp.FlowDirection == FlowDirection.RightToLeft))
-                    {
-                        w += cw;
-                        if (h < ch) h = ch;
-                    }
-                    else
-                    {
-                        if (w < cw) w = cw;
-                        h += ch;
-                    }
-                }
-            }
-            if ((w == 0) || (h == 0))
-            {
-                flp.Visible = false;
-            }
-            else
-            {
-                flp.Visible = true;
-                flp.Width = w + flp.Padding.Left + flp.Padding.Right;
-                flp.Height = h + flp.Padding.Top + flp.Padding.Bottom;
-            }
+            //int w = 0;
+            //int h = 0;
+            //foreach (Control ctl in flp.Controls)
+            //{
+            //    int cw = ctl.Width + ctl.Margin.Left + ctl.Margin.Right;
+            //    int ch = ctl.Height + ctl.Margin.Top + ctl.Margin.Bottom;
+            //    if (ctl.Visible)
+            //    {
+            //        if ((flp.FlowDirection == FlowDirection.LeftToRight) || (flp.FlowDirection == FlowDirection.RightToLeft))
+            //        {
+            //            w += cw;
+            //            if (h < ch) h = ch;
+            //        }
+            //        else
+            //        {
+            //            if (w < cw) w = cw;
+            //            h += ch;
+            //        }
+            //    }
+            //}
+            //if ((w == 0) || (h == 0))
+            //{
+            //    flp.Visible = false;
+            //}
+            //else
+            //{
+            //    flp.Visible = true;
+            //    flp.Width = w + flp.Padding.Left + flp.Padding.Right;
+            //    flp.Height = h + flp.Padding.Top + flp.Padding.Bottom;
+            //}
         }
 
         protected override void OnLoad(EventArgs e)
@@ -375,5 +375,15 @@ namespace UV_DLP_3D_Printer.GUI.Controls
 
         }
 
+        private void ctlManualControl_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+            this.tabControl1.Dock = DockStyle.Fill;
+        }
+
+        private void ctlStandardManual1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

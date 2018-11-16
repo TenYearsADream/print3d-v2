@@ -42,10 +42,11 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 0);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1411, 536);
+            this.tabControl1.Size = new System.Drawing.Size(1309, 733);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -55,18 +56,20 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1403, 510);
+            this.tabPage1.Size = new System.Drawing.Size(1301, 707);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Configure Machine";
             // 
             // ctlMachineConfig1
             // 
+            this.ctlMachineConfig1.BackColor = System.Drawing.Color.White;
             this.ctlMachineConfig1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctlMachineConfig1.Location = new System.Drawing.Point(6, 5);
             this.ctlMachineConfig1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ctlMachineConfig1.Name = "ctlMachineConfig1";
             this.ctlMachineConfig1.Size = new System.Drawing.Size(974, 510);
             this.ctlMachineConfig1.TabIndex = 0;
+            this.ctlMachineConfig1.Load += new System.EventHandler(this.ctlMachineConfig1_Load);
             // 
             // tabPage2
             // 
@@ -75,7 +78,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1403, 507);
+            this.tabPage2.Size = new System.Drawing.Size(192, 74);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Configure Printing Profile";
             // 
@@ -85,9 +88,9 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             this.ctlToolpathGenConfig1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctlToolpathGenConfig1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ctlToolpathGenConfig1.Location = new System.Drawing.Point(4, 7);
-            this.ctlToolpathGenConfig1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctlToolpathGenConfig1.Margin = new System.Windows.Forms.Padding(4);
             this.ctlToolpathGenConfig1.Name = "ctlToolpathGenConfig1";
-            this.ctlToolpathGenConfig1.Size = new System.Drawing.Size(892, 447);
+            this.ctlToolpathGenConfig1.Size = new System.Drawing.Size(1018, 611);
             this.ctlToolpathGenConfig1.TabIndex = 0;
             // 
             // ctlMainConfig
@@ -96,7 +99,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tabControl1);
             this.Name = "ctlMainConfig";
-            this.Size = new System.Drawing.Size(1427, 556);
+            this.Size = new System.Drawing.Size(1309, 733);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

@@ -33,5 +33,10 @@ namespace UV_DLP_3D_Printer.GUI.Controls.ManualControls
                 }
             }
         }
+
+        private void ctlMainManual_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+        }
     }
 }

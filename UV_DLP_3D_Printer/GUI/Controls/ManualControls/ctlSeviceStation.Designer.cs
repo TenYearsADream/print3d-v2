@@ -38,10 +38,9 @@
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblTitle.Location = new System.Drawing.Point(43, 17);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTitle.Location = new System.Drawing.Point(22, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(352, 38);
+            this.lblTitle.Size = new System.Drawing.Size(176, 20);
             this.lblTitle.TabIndex = 72;
             this.lblTitle.Text = "Service Station";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -49,48 +48,45 @@
             // ctlRFrame1
             // 
             this.ctlRFrame1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.ctlRFrame1.Location = new System.Drawing.Point(6, 6);
-            this.ctlRFrame1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ctlRFrame1.Location = new System.Drawing.Point(3, 3);
             this.ctlRFrame1.Name = "ctlRFrame1";
-            this.ctlRFrame1.Size = new System.Drawing.Size(542, 204);
+            this.ctlRFrame1.Size = new System.Drawing.Size(271, 106);
             this.ctlRFrame1.TabIndex = 82;
             // 
             // btnCleanPrintHead
             // 
             this.btnCleanPrintHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnCleanPrintHead.Location = new System.Drawing.Point(43, 70);
-            this.btnCleanPrintHead.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCleanPrintHead.Location = new System.Drawing.Point(22, 36);
             this.btnCleanPrintHead.Name = "btnCleanPrintHead";
-            this.btnCleanPrintHead.Size = new System.Drawing.Size(466, 44);
+            this.btnCleanPrintHead.Size = new System.Drawing.Size(233, 23);
             this.btnCleanPrintHead.TabIndex = 88;
-            this.btnCleanPrintHead.Text = "Clean Print Heads";
+            this.btnCleanPrintHead.Text = "Soft clean";
             this.btnCleanPrintHead.UseVisualStyleBackColor = true;
             this.btnCleanPrintHead.Click += new System.EventHandler(this.btnCleanPrintHead_Click);
             // 
             // btnCapping
             // 
             this.btnCapping.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnCapping.Location = new System.Drawing.Point(43, 134);
-            this.btnCapping.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCapping.Location = new System.Drawing.Point(22, 70);
             this.btnCapping.Name = "btnCapping";
-            this.btnCapping.Size = new System.Drawing.Size(466, 44);
+            this.btnCapping.Size = new System.Drawing.Size(233, 23);
             this.btnCapping.TabIndex = 89;
-            this.btnCapping.Text = "Hard Clean Print Heads";
+            this.btnCapping.Text = "Hard clean";
             this.btnCapping.UseVisualStyleBackColor = true;
             this.btnCapping.Click += new System.EventHandler(this.btnCapping_Click);
             // 
             // ctlSeviceStation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.btnCapping);
             this.Controls.Add(this.btnCleanPrintHead);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.ctlRFrame1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ctlSeviceStation";
-            this.Size = new System.Drawing.Size(556, 222);
+            this.Size = new System.Drawing.Size(278, 115);
             this.ResumeLayout(false);
 
         }

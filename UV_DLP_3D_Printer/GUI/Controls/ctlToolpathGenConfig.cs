@@ -35,10 +35,10 @@ namespace UV_DLP_3D_Printer.GUI.Controls
         {
             this.tabOptions.Font = new System.Drawing.Font(((DesignMode) ? "MicrosoftSansSerif" : UVDLPApp.Instance().resman.GetString("MicrosoftSansSerif", UVDLPApp.Instance().cul)), 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOptions.Text = ((DesignMode) ? "Options" : UVDLPApp.Instance().resman.GetString("Options", UVDLPApp.Instance().cul));
-            this.grpProfile.Text = ((DesignMode) ? "MachineProfile" : UVDLPApp.Instance().resman.GetString("MachineProfile", UVDLPApp.Instance().cul));
+            //this.grpProfile.Text = ((DesignMode) ? "MachineProfile" : UVDLPApp.Instance().resman.GetString("MachineProfile", UVDLPApp.Instance().cul));
             this.label15.Text = ((DesignMode) ? "Notes" : UVDLPApp.Instance().resman.GetString("Notes", UVDLPApp.Instance().cul));
             this.cmdHelp.Text = ((DesignMode) ? "Help" : UVDLPApp.Instance().resman.GetString("Help", UVDLPApp.Instance().cul));
-            this.grpExport.Text = ((DesignMode) ? "ExportOptions" : UVDLPApp.Instance().resman.GetString("ExportOptions", UVDLPApp.Instance().cul));
+            //this.grpExport.Text = ((DesignMode) ? "ExportOptions" : UVDLPApp.Instance().resman.GetString("ExportOptions", UVDLPApp.Instance().cul));
             this.labelExportPreview.Text = ((DesignMode) ? "ExportPreview" : UVDLPApp.Instance().resman.GetString("ExportPreview", UVDLPApp.Instance().cul));
             this.chkExport.Text = ((DesignMode) ? "ExportToCWS" : UVDLPApp.Instance().resman.GetString("ExportToCWS", UVDLPApp.Instance().cul));
             this.chkExportPNG.Text = ((DesignMode) ? "ExportToDisk" : UVDLPApp.Instance().resman.GetString("ExportToDisk", UVDLPApp.Instance().cul));
@@ -48,7 +48,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             ((DesignMode) ? "FilledPolygons" :UVDLPApp.Instance().resman.GetString("FilledPolygons", UVDLPApp.Instance().cul)),
             ((DesignMode) ? "CompoundPathOld" :UVDLPApp.Instance().resman.GetString("CompoundPathOld", UVDLPApp.Instance().cul)),
             ((DesignMode) ? "FilledPolygonsOld" :UVDLPApp.Instance().resman.GetString("FilledPolygonsOld", UVDLPApp.Instance().cul))}); this.labelExportSvg.Text = ((DesignMode) ? "ExportSVG" : UVDLPApp.Instance().resman.GetString("ExportSVG", UVDLPApp.Instance().cul));
-            this.groupBox5.Text = ((DesignMode) ? "Settings" : UVDLPApp.Instance().resman.GetString("Settings", UVDLPApp.Instance().cul));
+            //this.groupBox5.Text = ((DesignMode) ? "Settings" : UVDLPApp.Instance().resman.GetString("Settings", UVDLPApp.Instance().cul));
             this.label21.Text = ((DesignMode) ? "OutlineWidthOutsetPix" : UVDLPApp.Instance().resman.GetString("OutlineWidthOutsetPix", UVDLPApp.Instance().cul));
             this.label20.Text = ((DesignMode) ? "OutlineWidthInsetPix" : UVDLPApp.Instance().resman.GetString("OutlineWidthInsetPix", UVDLPApp.Instance().cul));
             this.chkOutlines.Text = ((DesignMode) ? "EnableSliceOutlines" : UVDLPApp.Instance().resman.GetString("EnableSliceOutlines", UVDLPApp.Instance().cul));
@@ -61,7 +61,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             this.buttResinCalib.Text = ((DesignMode) ? "Calibrate" : UVDLPApp.Instance().resman.GetString("Calibrate", UVDLPApp.Instance().cul));
             this.label18.Text = ((DesignMode) ? "Resin" : UVDLPApp.Instance().resman.GetString("Resin", UVDLPApp.Instance().cul));
             this.txtResinPriceL.Text = ((DesignMode) ? "_50_" : UVDLPApp.Instance().resman.GetString("_50_", UVDLPApp.Instance().cul));
-            this.label17.Text = ((DesignMode) ? "PricePerLiter" : UVDLPApp.Instance().resman.GetString("PricePerLiter", UVDLPApp.Instance().cul));
+            //this.label17.Text = ((DesignMode) ? "PricePerLiter" : UVDLPApp.Instance().resman.GetString("PricePerLiter", UVDLPApp.Instance().cul));
             this.groupBox3.Text = ((DesignMode) ? "ImageReflection" : UVDLPApp.Instance().resman.GetString("ImageReflection", UVDLPApp.Instance().cul));
             this.chkReflectY.Text = ((DesignMode) ? "ReflectY" : UVDLPApp.Instance().resman.GetString("ReflectY", UVDLPApp.Instance().cul));
             this.chkReflectX.Text = ((DesignMode) ? "ReflectX" : UVDLPApp.Instance().resman.GetString("ReflectX", UVDLPApp.Instance().cul));
@@ -100,7 +100,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             {
                 grpLift.Hide();
                 groupBox3.Hide(); // image reflection
-                grpExport.Hide();                
+                //grpExport.Hide();                
                 tabOptions.TabPages.Remove(m_gcodetab);
                 //TabControl
             }
@@ -116,7 +116,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             {
                 grpLift.Show();
                 groupBox3.Show(); // image reflection
-                grpExport.Show();
+                //grpExport.Show();
                 //tabOptions.TabPages["tbGCode"].Show();
                 tabOptions.TabPages.Add(m_gcodetab);
             }
@@ -248,7 +248,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             txtZThick.Text = "" + String.Format("{0:0.000}", m_config.ZThick);
             txtLayerTime.Text = "" + m_config.layertime_ms;
             txtFirstLayerTime.Text = m_config.firstlayertime_ms.ToString();
-            txtResinPriceL.Text = m_config.m_resinprice.ToString();
+            //txtResinPriceL.Text = m_config.m_resinprice.ToString();
             txtnumbottom.Text = m_config.numfirstlayers.ToString();
 
             //txtWallThickness.Text = m_config.m_wall_thickness.ToString();
@@ -331,7 +331,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
                 m_config.layertime_ms = int.Parse(txtLayerTime.Text);
                 m_config.firstlayertime_ms = int.Parse(txtFirstLayerTime.Text);
                 m_config.numfirstlayers = int.Parse(txtnumbottom.Text);
-                m_config.m_resinprice = double.Parse(txtResinPriceL.Text);
+                //m_config.m_resinprice = double.Parse(txtResinPriceL.Text);
                 m_config.m_createoutlines = chkOutlines.Checked;
 
                 m_config.m_feed_thickness = double.Parse(txtFeedthickness.Text);
@@ -347,8 +347,8 @@ namespace UV_DLP_3D_Printer.GUI.Controls
                 m_config.m_outlinewidth_inset = double.Parse(txtOutlineWidthInset.Text);
                 m_config.m_outlinewidth_outset = double.Parse(txtOutlineWidthOutset.Text);
 
-                m_config.m_fluidPrice = double.Parse(txtFluidPriceL.Text);
-                m_config.m_powderPrice = double.Parse(txtPowderPriceL.Text);
+                //m_config.m_fluidPrice = double.Parse(txtFluidPriceL.Text);
+                //m_config.m_powderPrice = double.Parse(txtPowderPriceL.Text);
 
                 m_config.UpdateCurrentInk();
 
@@ -665,7 +665,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             guiconf.AddControl("ctlToolpathGenConfig1.tbGCode",tbGCode);   
             guiconf.AddControl("ctlToolpathGenConfig1.tbOptions", tbOptions);
             guiconf.AddControl("ctlToolpathGenConfig1.panelExposure", panelExposure);
-            guiconf.AddControl("ctlToolpathGenConfig1.grpExport", grpExport);
+            //guiconf.AddControl("ctlToolpathGenConfig1.grpExport", grpExport);
             guiconf.AddControl("ctlToolpathGenConfig1.grpLift", grpLift);
         }
 
@@ -692,7 +692,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
 
         private void SetPowderValues()
         {
-            txtPowderPriceL.Text = m_config.m_powderPrice.ToString();
+            //txtPowderPriceL.Text = m_config.m_powderPrice.ToString();
         }
 
         private void cmdNewFluid_Click(object sender, EventArgs e)
@@ -717,7 +717,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
 
         private void SetFluidValues()
         {
-            txtFluidPriceL.Text = m_config.m_fluidPrice.ToString();
+            //txtFluidPriceL.Text = m_config.m_fluidPrice.ToString();
 
         }
 
@@ -780,6 +780,26 @@ namespace UV_DLP_3D_Printer.GUI.Controls
         private void chkDepowderingWall_CheckedChanged(object sender, EventArgs e)
         {
             numWallThickness.Enabled = chkDepowderingWall.Checked;
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

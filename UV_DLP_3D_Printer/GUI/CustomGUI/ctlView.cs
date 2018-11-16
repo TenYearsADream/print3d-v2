@@ -253,6 +253,9 @@ namespace UV_DLP_3D_Printer.GUI.CustomGUI
             UVDLPApp.Instance().m_gui_config.AddButton(parentName + ".title", ctlTitle1);
         }
 
+        private void buttShowConsole_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

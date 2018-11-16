@@ -71,19 +71,20 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(2102, 1041);
+            this.tabControl1.Size = new System.Drawing.Size(1968, 682);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.flowMain);
-            this.tabPage1.Location = new System.Drawing.Point(8, 39);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(2086, 994);
+            this.tabPage1.Size = new System.Drawing.Size(1960, 656);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Manual Control";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -93,9 +94,10 @@
             this.flowMain.Controls.Add(this.flowLeft);
             this.flowMain.Controls.Add(this.flowRight);
             this.flowMain.Controls.Add(this.ctlStandardManual1);
-            this.flowMain.Location = new System.Drawing.Point(3, 6);
+            this.flowMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowMain.Location = new System.Drawing.Point(3, 3);
             this.flowMain.Name = "flowMain";
-            this.flowMain.Size = new System.Drawing.Size(2091, 996);
+            this.flowMain.Size = new System.Drawing.Size(1954, 650);
             this.flowMain.TabIndex = 6;
             // 
             // flowLeft
@@ -537,17 +539,18 @@
             // 
             this.ctlStandardManual1.AutoScroll = true;
             this.ctlStandardManual1.Location = new System.Drawing.Point(939, 2);
-            this.ctlStandardManual1.Margin = new System.Windows.Forms.Padding(2);
+            this.ctlStandardManual1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctlStandardManual1.Name = "ctlStandardManual1";
-            this.ctlStandardManual1.Size = new System.Drawing.Size(997, 695);
+            this.ctlStandardManual1.Size = new System.Drawing.Size(997, 700);
             this.ctlStandardManual1.TabIndex = 6;
+            this.ctlStandardManual1.Load += new System.EventHandler(this.ctlStandardManual1_Load);
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1584, 550);
+            this.tabPage2.Size = new System.Drawing.Size(1960, 656);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Advanced Control";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -556,8 +559,10 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tabControl1);
+            this.DoubleBuffered = true;
             this.Name = "ctlManualControl";
-            this.Size = new System.Drawing.Size(2176, 1122);
+            this.Size = new System.Drawing.Size(1968, 682);
+            this.Load += new System.EventHandler(this.ctlManualControl_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.flowMain.ResumeLayout(false);

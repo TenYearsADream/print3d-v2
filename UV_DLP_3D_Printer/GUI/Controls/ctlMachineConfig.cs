@@ -43,7 +43,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             this.label5.Text = ((DesignMode) ? "X" : UVDLPApp.Instance().resman.GetString("X", UVDLPApp.Instance().cul));
             this.txtPlatWidth.Text = ((DesignMode) ? "_102" : UVDLPApp.Instance().resman.GetString("_102", UVDLPApp.Instance().cul));
             this.cmdOK.Text = ((DesignMode) ? "ApplyChanges" : UVDLPApp.Instance().resman.GetString("ApplyChanges", UVDLPApp.Instance().cul));
-            this.groupBox4.Text = ((DesignMode) ? "MachineConnection" : UVDLPApp.Instance().resman.GetString("MachineConnection", UVDLPApp.Instance().cul));
+            //this.groupBox4.Text = ((DesignMode) ? "MachineConnection" : UVDLPApp.Instance().resman.GetString("MachineConnection", UVDLPApp.Instance().cul));
             //this.label13.Text = ((DesignMode) ? "Port__" : UVDLPApp.Instance().resman.GetString("Port__", UVDLPApp.Instance().cul));
             this.cmdCfgConMch.Text = ((DesignMode) ? "Configure" : UVDLPApp.Instance().resman.GetString("Configure", UVDLPApp.Instance().cul));
             this.lblConMachine.Text = ((DesignMode) ? "_UnderLine" : UVDLPApp.Instance().resman.GetString("_UnderLine", UVDLPApp.Instance().cul));
@@ -68,7 +68,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             this.checkMCXY.Text = ((DesignMode) ? "XYAxis__" : UVDLPApp.Instance().resman.GetString("XYAxis__", UVDLPApp.Instance().cul));
             this.groupBox3.Text = ((DesignMode) ? "ConfiguredDisplays" : UVDLPApp.Instance().resman.GetString("ConfiguredDisplays", UVDLPApp.Instance().cul));
             this.lblMulti.Text = ((DesignMode) ? "MultiMonOrientation" : UVDLPApp.Instance().resman.GetString("MultiMonOrientation", UVDLPApp.Instance().cul));
-            this.groupBox2.Text = ((DesignMode) ? "OutputResolutionPx" : UVDLPApp.Instance().resman.GetString("OutputResolutionPx", UVDLPApp.Instance().cul));
+            //this.groupBox2.Text = ((DesignMode) ? "OutputResolutionPx" : UVDLPApp.Instance().resman.GetString("OutputResolutionPx", UVDLPApp.Instance().cul));
             this.chkOverride.Text = ((DesignMode) ? "OverrideSize" : UVDLPApp.Instance().resman.GetString("OverrideSize", UVDLPApp.Instance().cul));
             this.label4.Text = ((DesignMode) ? "Height" : UVDLPApp.Instance().resman.GetString("Height", UVDLPApp.Instance().cul));
             this.label7.Text = ((DesignMode) ? "Width" : UVDLPApp.Instance().resman.GetString("Width", UVDLPApp.Instance().cul));
@@ -854,6 +854,11 @@ namespace UV_DLP_3D_Printer.GUI.Controls
         private void btnRoller_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            numericUpDown1.Enabled = button1.Enabled = checkBox1.Checked;
         }
     }
 }

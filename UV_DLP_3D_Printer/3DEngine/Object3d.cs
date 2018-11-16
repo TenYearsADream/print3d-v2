@@ -757,26 +757,42 @@ namespace Engine3D
             GL.Translate(_transform);
            
             GL.LineWidth(1);
-            GL.Begin(PrimitiveType.LineStrip); //.Lines);
+            GL.Begin(PrimitiveType.Lines); //.Lines);
             GL.Color3(color);
             GL.Vertex3(m_min.x, m_min.y, m_min.z);
             GL.Vertex3(m_max.x, m_min.y, m_min.z);
             GL.Vertex3(m_max.x, m_max.y, m_min.z);
             GL.Vertex3(m_min.x, m_max.y, m_min.z);
             GL.Vertex3(m_min.x, m_min.y, m_min.z);
+
             GL.Vertex3(m_min.x, m_min.y, m_max.z);
             GL.Vertex3(m_max.x, m_min.y, m_max.z);
             GL.Vertex3(m_max.x, m_max.y, m_max.z);
             GL.Vertex3(m_min.x, m_max.y, m_max.z);
+
             GL.Vertex3(m_min.x, m_min.y, m_max.z);
             GL.Vertex3(m_min.x, m_min.y, m_min.z);
             GL.Vertex3(m_min.x, m_min.y, m_max.z);
             GL.Vertex3(m_max.x, m_min.y, m_min.z);
             GL.Vertex3(m_max.x, m_min.y, m_max.z);
+
             GL.Vertex3(m_max.x, m_max.y, m_min.z);
             GL.Vertex3(m_max.x, m_max.y, m_max.z);
             GL.Vertex3(m_min.x, m_max.y, m_min.z);
             GL.Vertex3(m_min.x, m_max.y, m_max.z);
+
+            GL.Vertex3(m_min.x, m_max.y, m_max.z);
+            GL.Vertex3(m_max.x, m_max.y, m_max.z);
+
+            GL.Vertex3(m_min.x, m_min.y, m_max.z);
+            GL.Vertex3(m_max.x, m_min.y, m_max.z);
+
+            GL.Vertex3(m_min.x, m_min.y, m_min.z);
+            GL.Vertex3(m_min.x, m_max.y, m_min.z);
+
+            GL.Vertex3(m_max.x, m_min.y, m_min.z);
+            GL.Vertex3(m_max.x, m_max.y, m_min.z);
+
             GL.End();
             GL.LineWidth(2);
 

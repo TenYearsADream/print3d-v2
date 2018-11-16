@@ -78,5 +78,20 @@ namespace UV_DLP_3D_Printer.GUI.Controls.ManualControls
             UVDLPApp.Instance().IntegrationFunction.PLCFunction
              .PLC.ChangeVelocityZ((float)ctlZspeed.Value);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

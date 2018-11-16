@@ -157,8 +157,8 @@
             this.textRotateX.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textRotateX.MaxFloat = 360F;
             this.textRotateX.MaxInt = 1000;
-            this.textRotateX.MinFloat = 0F;
-            this.textRotateX.MinInt = 1;
+            this.textRotateX.MinFloat = -360F;
+            this.textRotateX.MinInt = -1000;
             this.textRotateX.Name = "textRotateX";
             this.textRotateX.Size = new System.Drawing.Size(60, 28);
             this.textRotateX.TabIndex = 4;
@@ -260,8 +260,8 @@
             this.textRotateY.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textRotateY.MaxFloat = 360F;
             this.textRotateY.MaxInt = 1000;
-            this.textRotateY.MinFloat = 0F;
-            this.textRotateY.MinInt = 1;
+            this.textRotateY.MinFloat = -360F;
+            this.textRotateY.MinInt = -1000;
             this.textRotateY.Name = "textRotateY";
             this.textRotateY.Size = new System.Drawing.Size(60, 28);
             this.textRotateY.TabIndex = 4;
@@ -363,8 +363,8 @@
             this.textRotateZ.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textRotateZ.MaxFloat = 360F;
             this.textRotateZ.MaxInt = 1000;
-            this.textRotateZ.MinFloat = 0F;
-            this.textRotateZ.MinInt = 1;
+            this.textRotateZ.MinFloat = -360F;
+            this.textRotateZ.MinInt = -1000;
             this.textRotateZ.Name = "textRotateZ";
             this.textRotateZ.Size = new System.Drawing.Size(60, 28);
             this.textRotateZ.TabIndex = 4;

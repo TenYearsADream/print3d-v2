@@ -80,9 +80,9 @@
             // btnSetPurgePressure
             // 
             this.btnSetPurgePressure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnSetPurgePressure.Location = new System.Drawing.Point(224, 37);
+            this.btnSetPurgePressure.Location = new System.Drawing.Point(226, 38);
             this.btnSetPurgePressure.Name = "btnSetPurgePressure";
-            this.btnSetPurgePressure.Size = new System.Drawing.Size(28, 23);
+            this.btnSetPurgePressure.Size = new System.Drawing.Size(37, 23);
             this.btnSetPurgePressure.TabIndex = 83;
             this.btnSetPurgePressure.Text = "OK";
             this.btnSetPurgePressure.UseVisualStyleBackColor = true;
@@ -91,9 +91,9 @@
             // btnSetPurgeTime
             // 
             this.btnSetPurgeTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnSetPurgeTime.Location = new System.Drawing.Point(224, 63);
+            this.btnSetPurgeTime.Location = new System.Drawing.Point(226, 64);
             this.btnSetPurgeTime.Name = "btnSetPurgeTime";
-            this.btnSetPurgeTime.Size = new System.Drawing.Size(28, 23);
+            this.btnSetPurgeTime.Size = new System.Drawing.Size(37, 23);
             this.btnSetPurgeTime.TabIndex = 84;
             this.btnSetPurgeTime.Text = "OK";
             this.btnSetPurgeTime.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@
             // btnPurgeCommand
             // 
             this.btnPurgeCommand.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnPurgeCommand.Location = new System.Drawing.Point(224, 89);
+            this.btnPurgeCommand.Location = new System.Drawing.Point(226, 90);
             this.btnPurgeCommand.Name = "btnPurgeCommand";
-            this.btnPurgeCommand.Size = new System.Drawing.Size(28, 23);
+            this.btnPurgeCommand.Size = new System.Drawing.Size(37, 23);
             this.btnPurgeCommand.TabIndex = 87;
             this.btnPurgeCommand.Text = "OK";
             this.btnPurgeCommand.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             this.btnStopPurgeCommand.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnStopPurgeCommand.Location = new System.Drawing.Point(19, 158);
             this.btnStopPurgeCommand.Name = "btnStopPurgeCommand";
-            this.btnStopPurgeCommand.Size = new System.Drawing.Size(233, 23);
+            this.btnStopPurgeCommand.Size = new System.Drawing.Size(244, 23);
             this.btnStopPurgeCommand.TabIndex = 88;
             this.btnStopPurgeCommand.Text = "Stop Purge Command";
             this.btnStopPurgeCommand.UseVisualStyleBackColor = true;
@@ -146,9 +146,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button1.Location = new System.Drawing.Point(19, 119);
+            this.button1.Location = new System.Drawing.Point(19, 123);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 23);
+            this.button1.Size = new System.Drawing.Size(244, 23);
             this.button1.TabIndex = 90;
             this.button1.Text = "Purge";
             this.button1.UseVisualStyleBackColor = true;
@@ -156,9 +156,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.Location = new System.Drawing.Point(19, 197);
+            this.button2.Location = new System.Drawing.Point(19, 193);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(233, 23);
+            this.button2.Size = new System.Drawing.Size(244, 23);
             this.button2.TabIndex = 91;
             this.button2.Text = "Drain System";
             this.button2.UseVisualStyleBackColor = true;
@@ -234,7 +234,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.ctlRFrame1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ctlFluidSuply";
             this.Size = new System.Drawing.Size(277, 235);
             ((System.ComponentModel.ISupportInitialize)(this.txtSetPurgePressure)).EndInit();

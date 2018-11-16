@@ -15,17 +15,17 @@ namespace UV_DLP_3D_Printer.GUI
         public frmAbout()
         {
             InitializeComponent();
-            label1.Parent = pictureBox1;
-            label1.BackColor = Color.Transparent;
-            label2.Parent = pictureBox1;
-            label2.BackColor = Color.Transparent;
-            label3.Parent = pictureBox1;
-            label3.BackColor = Color.Transparent;
-            label4.Parent = pictureBox1;
-            label4.BackColor = Color.Transparent;
-            version.Parent = pictureBox1;
-            version.BackColor = Color.Transparent;
-            version.Text = ((DesignMode) ? "Version" :UVDLPApp.Instance().resman.GetString("Version", UVDLPApp.Instance().cul)) + Application.ProductVersion;
+            //label1.Parent = pictureBox1;
+            //label1.BackColor = Color.Transparent;
+            //label2.Parent = pictureBox1;
+            //label2.BackColor = Color.Transparent;
+            //label3.Parent = pictureBox1;
+            //label3.BackColor = Color.Transparent;
+            //label4.Parent = pictureBox1;
+            //label4.BackColor = Color.Transparent;
+            //version.Parent = pictureBox1;
+            //version.BackColor = Color.Transparent;
+            //version.Text = ((DesignMode) ? "Version" :UVDLPApp.Instance().resman.GetString("Version", UVDLPApp.Instance().cul)) + Application.ProductVersion;
             LoadAbout();
             SetTexts();
 
@@ -33,11 +33,11 @@ namespace UV_DLP_3D_Printer.GUI
 
         private void SetTexts()
         {
-            this.label2.Text = ((DesignMode) ? "FreeForNonCommercialUse" : UVDLPApp.Instance().resman.GetString("FreeForNonCommercialUse", UVDLPApp.Instance().cul));
-            this.label1.Text = ((DesignMode) ? "CreationWorkshop" : UVDLPApp.Instance().resman.GetString("CreationWorkshop", UVDLPApp.Instance().cul));
-            this.label3.Text = ((DesignMode) ? "SteveHernandezAkaPacManFan" : UVDLPApp.Instance().resman.GetString("SteveHernandezAkaPacManFan", UVDLPApp.Instance().cul));
-            this.label4.Text = ((DesignMode) ? "ShaiSegar" : UVDLPApp.Instance().resman.GetString("ShaiSegar", UVDLPApp.Instance().cul));
-            this.Text = ((DesignMode) ? "About" : UVDLPApp.Instance().resman.GetString("About", UVDLPApp.Instance().cul));
+            //this.label2.Text = ((DesignMode) ? "FreeForNonCommercialUse" : UVDLPApp.Instance().resman.GetString("FreeForNonCommercialUse", UVDLPApp.Instance().cul));
+            ////this.label1.Text = ((DesignMode) ? "CreationWorkshop" : UVDLPApp.Instance().resman.GetString("CreationWorkshop", UVDLPApp.Instance().cul));
+            //this.label3.Text = ((DesignMode) ? "SteveHernandezAkaPacManFan" : UVDLPApp.Instance().resman.GetString("SteveHernandezAkaPacManFan", UVDLPApp.Instance().cul));
+            //this.label4.Text = ((DesignMode) ? "ShaiSegar" : UVDLPApp.Instance().resman.GetString("ShaiSegar", UVDLPApp.Instance().cul));
+            //this.Text = ((DesignMode) ? "About" : UVDLPApp.Instance().resman.GetString("About", UVDLPApp.Instance().cul));
         }
 
         private void LoadAbout() 
@@ -45,12 +45,12 @@ namespace UV_DLP_3D_Printer.GUI
             Bitmap bmp = UVDLPApp.Instance().GetPluginImage("About");
              if (bmp != null)
              {
-                 label1.Hide();
-                 label2.Hide();
-                 label3.Hide();
-                 label4.Hide();
-                 version.Hide();
-                 cmdDonate.Hide();
+                 //label1.Hide();
+                 //label2.Hide();
+                 //label3.Hide();
+                 //label4.Hide();
+                 //version.Hide();
+                 //cmdDonate.Hide();
                  pictureBox1.Image = bmp;
              }
         }
@@ -80,6 +80,11 @@ namespace UV_DLP_3D_Printer.GUI
             {
                 DebugLogger.Instance().LogError(ex.Message);
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

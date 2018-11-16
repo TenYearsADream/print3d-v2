@@ -127,5 +127,21 @@ namespace UV_DLP_3D_Printer.GUI.Controls
             //pnlMachineConfig.BackColor = Wcolor.BackColor;// Control.DefaultBackColor;
             //pnlMachineConfig.ForeColor = Wcolor.ForeColor;// Control.DefaultForeColor;
         }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            if ((Parent == null) || (Parent.BackColor == null))
+            {
+                base.OnPaintBackground(e);
+                return;
+            }
+            Brush br = new SolidBrush(Parent.BackColor);
+            e.Graphics.FillRectangle(br, 0, 0, Width, Height);
+        }
+
+        private void ctlMachineConfig1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
