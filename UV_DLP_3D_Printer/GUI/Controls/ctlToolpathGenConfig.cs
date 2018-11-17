@@ -340,7 +340,7 @@ namespace UV_DLP_3D_Printer.GUI.Controls
                 m_config.m_bottom_layers = double.Parse(txtBottomLayyer.Text);
                 m_config.m_roller_speed = double.Parse(txtRollerSpeed.Text);
                 //m_config.m_wall_thickness = double.Parse(txtWallThickness.Text);
-                m_config.m_wall_thickness = (double)numWallThickness.Value;
+                m_config.m_wall_thickness = chkDepowderingWall.Checked?(double)numWallThickness.Value:0;
 
 
 
