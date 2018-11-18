@@ -254,7 +254,7 @@ namespace UV_DLP_3D_Printer
         //public Bitmap SliceImmediate(float curz, List<PolyLine3d> lstPoly = null)
         public Bitmap SliceImmediate(float curz, List<PolyLine3d> allIntersections, bool outline = true, bool bottomLayers = false)
         {
-            outline = true;
+            outline = false;
             try
             {
                 //first take care of scaling up the output bitmap paramters size, so we can re-sample later
@@ -274,6 +274,7 @@ namespace UV_DLP_3D_Printer
                 using (Graphics graph = Graphics.FromImage(bmp))
                 {
                     graph.Clear(UVDLPApp.Instance().m_appconfig.m_backgroundcolor);
+                    if((float)m_sf.m_config.m_wall_thickness>0)
                     graph.DrawRectangle(new Pen(new SolidBrush(UVDLPApp.Instance().m_appconfig.m_foregroundcolor), (float)m_sf.m_config.m_wall_thickness), new Rectangle(0, 0, m_sf.m_config.xres, m_sf.m_config.yres));
                     //graph.DrawString("omid", new Font(new FontFamily("Tahoma"), 10 ,FontStyle.Bold), new SolidBrush(Color.Red), new PointF(2, 299));
                     //clear the image for rendering      
@@ -297,6 +298,7 @@ namespace UV_DLP_3D_Printer
                             allIntersections.AddRange(lstintersections);
                        
                         savebm = bmp;
+                        savebm.Save("xxxx.png");
                     }
                 }
                 if (m_sf.m_config.antialiasing == true) // we're using anti-aliasing here, so resize the image
