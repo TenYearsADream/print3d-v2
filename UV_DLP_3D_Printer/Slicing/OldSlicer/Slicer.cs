@@ -298,7 +298,6 @@ namespace UV_DLP_3D_Printer
                             allIntersections.AddRange(lstintersections);
                        
                         savebm = bmp;
-                        savebm.Save("xxxx.png");
                     }
                 }
                 if (m_sf.m_config.antialiasing == true) // we're using anti-aliasing here, so resize the image
